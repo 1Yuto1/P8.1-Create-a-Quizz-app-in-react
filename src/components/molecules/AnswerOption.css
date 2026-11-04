@@ -1,0 +1,47 @@
+.answer-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border: var(--border-width-strong) solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.answer-option:not(.answer-option--disabled) {
+  cursor: pointer;
+}
+
+.answer-option:not(.answer-option--disabled):hover {
+  border-color: var(--color-primary);
+}
+
+.answer-option:focus-within {
+  outline: var(--border-width-strong) solid var(--color-primary);
+  outline-offset: var(--border-width-strong);
+}
+
+.answer-option__input {
+  accent-color: var(--color-primary);
+}
+
+.answer-option__text {
+  flex: 1;
+}
+
+/* State modifiers come AFTER --selected so they win */
+.answer-option--selected {
+  border-color: var(--color-primary);
+  background: var(--color-primary-soft);
+}
+
+.answer-option--correct {
+  border-color: var(--color-success);
+  background: var(--color-success-soft);
+}
+
+.answer-option--wrong {
+  border-color: var(--color-danger);
+  background: var(--color-danger-soft);
+}

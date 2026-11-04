@@ -1,0 +1,26 @@
+.question-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  min-width: 0;
+  padding: 0;
+  border: 0;
+}
+
+.question-card__answers {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.question-card__feedback {
+  font-weight: var(--font-weight-bold);
+}
+
+.question-card__feedback--correct {
+  color: var(--color-success);
+}
+
+.question-card__feedback--wrong {
+  color: var(--color-danger);
+}
